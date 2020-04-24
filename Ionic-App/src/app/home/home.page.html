@@ -1,0 +1,141 @@
+
+<!-- Scrollable Segment -->
+<!-- <ion-segment scrollable value="home">
+
+  <ion-segment-button value="home">
+    <ion-icon name="home"></ion-icon>
+  </ion-segment-button>
+
+  <ion-segment-button value="1" layout="icon-bottom">
+    <ion-label>add</ion-label>
+    <ion-icon name="add"></ion-icon>
+
+  </ion-segment-button>
+
+  
+</ion-segment> -->
+
+
+
+<!-- 
+<ion-header>  
+  <ion-toolbar>  
+    <ion-buttons slot="start">  
+      <ion-menu-button></ion-menu-button>  
+    </ion-buttons>  
+    <ion-title>Ionic Segment</ion-title>  
+  </ion-toolbar>  
+</ion-header>  
+  
+<ion-content class="ion-padding" color="light">  
+  <ion-toolbar>  
+    <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segment" color="primary">  
+      <ion-segment-button value="0">  
+        <ion-label>Contact</ion-label>  
+        <ion-icon name="contact"></ion-icon>  
+      </ion-segment-button>  
+      <ion-segment-button value="1">  
+        <ion-label>Camera</ion-label>  
+        <ion-icon name="camera"></ion-icon>  
+      </ion-segment-button>  
+      <ion-segment-button value="2">  
+        <ion-label>Map</ion-label>  
+        <ion-icon name="pin"></ion-icon>  
+      </ion-segment-button>  
+    </ion-segment>  
+  </ion-toolbar>  
+    
+  <ion-slides #slides (ionSlideDidChange)="slideChanged()" scrollbar="true">  
+    <ion-slide>First Segment</ion-slide>  
+    <ion-slide>Second Segment</ion-slide>  
+    <ion-slide>Third Segment</ion-slide>  
+  </ion-slides>  
+</ion-content>   -->
+
+
+
+
+<!-- <ion-header [translucent]="true" background="blue" color="blue">
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<br><br><br><br>
+<div class="login-logo">
+  <img src="assets/img/car.jpg" alt="Ionic logo" height="120px" width="120px"/>
+</div>
+
+<ion-toolbar>
+  <ion-title size="large"><p align="center" text-overflow="ellipsis" fontSize="20"><font size="5" color="red">MotoCorp Service Center</font></ion-title>
+</ion-toolbar>
+
+<ion-content>
+
+  <form #loginForm="ngForm">
+    <ion-list>
+      <div id="container" padding>
+      <ion-item>
+        <ion-label position="stacked"  position="floating" color="primary">Username</ion-label>
+        <ion-input
+          [(ngModel)]="login.username"
+          name="username"
+          type="text"
+          #username="ngModel"
+          spellcheck="false"
+          autocapitalize="off"
+          required
+        >
+        </ion-input>
+      </ion-item>
+
+      <ion-text color="danger">
+        <p
+          [hidden]="username.valid || submitted == false"
+          class="ion-padding-start"
+        >
+          Username is required
+        </p>
+      </ion-text>
+
+      <ion-item>
+        <ion-label position="stacked" position="floating" color="primary">Password</ion-label>
+        <ion-input
+          [(ngModel)]="login.password"
+          name="password"
+          type="password"
+          #password="ngModel"
+          required
+        >
+        </ion-input>
+      </ion-item>
+
+
+
+      
+      <ion-text color="danger">
+        <p
+          [hidden]="password.valid || submitted == false"
+          class="ion-padding-start"
+        >
+          Password is required
+        </p>
+      </ion-text>
+      </div>
+    </ion-list>
+
+    <!-- <ion-button class="custom ion-activated" shape="round" fill="outline" (click)="pushInit()" > <ion-icon slot="end"></ion-icon>Init</ion-button> -->
+<br>
+<br>
+    <!-- <ion-row> -->
+      <div padding align="center" width="300px">
+      <ion-button class="custom ion-activated" shape="round" fill="outline" (click)="onLogin(loginForm)" type="submit" > <ion-icon slot="end" name="log-in"></ion-icon>login</ion-button>
+      <ion-button class="custom ion-activated" shape="round" fill="outline"  > <ion-icon slot="end" name="paper-plane"></ion-icon>Sign Up</ion-button>
+    </div>
+      <!-- <ion-button shape="round" fill="outline">Outline + Round</ion-button> -->
+    <!-- </ion-row> -->
+  </form>
+  
+</ion-content>

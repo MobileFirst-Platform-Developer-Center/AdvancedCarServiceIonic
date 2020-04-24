@@ -1,0 +1,39 @@
+
+.login-logo {
+  padding: 20px 0;
+  min-height: 100px;
+  text-align: center;
+}
+
+.login-logo img {
+  max-width: 150px;
+}
+
+.list {
+  margin-bottom: 0;
+}
+
+ion-slide {  
+  height: calc(100vh - 140px);  
+}  
+
+#container {
+  width: 350px; 
+  margin-left:auto; 
+  margin-right: auto; 
+}
+
+// ion-item {
+//   --padding-start: 0px;
+//   --padding-end: 0px;
+// }
+
+
+ion-app, ion-nav, ion-tab, ion-tabs, .app-root{
+  -webkit-transition: bottom 0.3s;
+  transition: bottom 0.3s;
+}
+
+.scroll-content {
+  padding-bottom:0!important;
+}

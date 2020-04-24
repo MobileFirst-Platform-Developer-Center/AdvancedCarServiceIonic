@@ -1,0 +1,28 @@
+ion-item{
+    --background: #4789fc;
+    --color: #fff;
+}
+
+ion-button{
+    --background: #062f77;
+}
+
+ion-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 90px 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+
+//   ion-app, ion-nav, ion-tab, ion-tabs, .app-root{
+//     -webkit-transition: bottom 0.3s;
+//     transition: bottom 0.3s;
+//   }
+  
+//   .scroll-content {
+//     padding-bottom:0!important;
+//   }
