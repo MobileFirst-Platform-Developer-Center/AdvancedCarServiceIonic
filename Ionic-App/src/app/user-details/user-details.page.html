@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+    <!-- <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons> -->
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div align="center">
+          
+    <h1> Profile</h1>
+    <img class="profile-image" src="{{user.img}}">
+    <p> <b>Name</b> : {{user.name}}</p>
+    <p> <b>Org</b>: {{user.org}}</p>
+
+      <b> <p> Due date : {{user.duedate | date}}</p></b>
+
+      <ion-list lines="none">
+        <ion-item>
+          <ion-icon name="calendar" slot="start"></ion-icon>
+          <ion-label position="stacked">Date</ion-label>
+          <ion-datetime displayFormat="MMM DD, YYYY" max="2056" [(ngModel)]="bookingdate"></ion-datetime>
+          <ion-button slot="end" (click)='onBook()'>Book</ion-button>
+        </ion-item>
+    
+      </ion-list>
+  </div>
+
+
+  <div align="center">
+    <h2> History</h2>
+  </div>
+
+
+  <ion-list *ngFor="let u of user.history">
+
+
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{u.date}}</ion-card-title>
+            <ion-card-subtitle>{{u.Type}}</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            {{u.Comments}}
+          </ion-card-content>
+        </ion-card>        
+
+
+  </ion-list>
+
+
+  <div padding align="center" width="200px">
+    <ion-button  size="default" expand="fill" (click)="backPage()">Back</ion-button>
+  </div>
+
+</ion-content>
+
+

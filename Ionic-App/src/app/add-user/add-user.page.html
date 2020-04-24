@@ -1,0 +1,81 @@
+
+
+<!-- 
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>addUser</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title align-title="center" >Add New Profile</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <!-- <form (ngSubmit)="register()"> -->
+    <form  #form="ngForm" (ngSubmit)="register(form)">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="20" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>Create New User!</h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-label  position="floating" >Name</ion-label>
+              <ion-input  [(ngModel)]="user.name"  name ="name" type="text" placeholder="Charan Kumar"  required>
+              <!-- <ion-input [(ngModel)]="user.username" type="text"></ion-input> -->
+              </ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label   position="floating" >Org</ion-label>
+              <ion-input [(ngModel)]="user.org" type="text" name ="org" placeholder="finance" required>
+              </ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label  position="floating" >Vehicle Number </ion-label>
+              <ion-input  [(ngModel)]="user.plate" name="plate" type="text" placeholder="KA 02 AY 3365"  required>
+              </ion-input>
+            </ion-item>
+         <ion-item> 
+              <ion-label  position="floating"  >Vehicle Model Year </ion-label>
+              <ion-input  [(ngModel)]="user.model" name="model" type="text" placeholder="2020"  required>
+              </ion-input>
+            </ion-item > 
+              <ion-item>
+              <ion-icon name="calendar" slot="start"></ion-icon>
+              <ion-label position="floating" required>Due Date</ion-label>
+              <ion-input   type="text"  required>
+                <ion-datetime  [(ngModel)]="user.date" pickerFormat="MMMM YYYY" name="date" displayFormat="MMM DD, YYYY" max="2056" placeholder="Feb 20,2020" required></ion-datetime>
+              </ion-input>
+             
+            </ion-item>
+
+            <!-- <p>{{today | date}}</p> -->
+
+
+            <!-- <ion-item>
+              <ion-label  position="floating"  >Vehicle Model Year </ion-label>
+              <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+            </ion-item> -->
+
+          </div>
+          <div padding align="center" width="200px">
+            <ion-button  size="default" type="submit" [disabled]="form.invalid" expand="fill">Register</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
